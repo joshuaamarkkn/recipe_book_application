@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Book</title>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Recipe Book</h1>
+        <div class="search-section">
+            <input type="text" id="searchInput" placeholder="Search recipes...">
+            <select id="categoryFilter">
+                <option value="">All Categories</option>
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+                <option value="dessert">Dessert</option>
+            </select>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Recipe Cards Container -->
+        <section class="recipes-grid" id="recipesContainer">
+            <!-- Recipe cards will be dynamically added by JavaScript -->
+        </section>
+
+        <!-- Favorites Section -->
+        <aside class="favorites-sidebar">
+            <h2>Favorite Recipes</h2>
+            <ul id="favoritesList">
+                <!-- Favorites will be added here dynamically -->
+            </ul>
+        </aside>
+    </main>
+
+    <!-- Timer Modal -->
+    <div id="timerModal" class="modal">
+        <div class="modal-content">
+            <h2>Kitchen Timer</h2>
+            <div class="timer-display">00:00</div>
+            <div class="timer-controls">
+                <input type="number" id="timerMinutes" min="0" max="999" placeholder="Minutes">
+                <button id="startTimer">Start</button>
+                <button id="stopTimer">Stop</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
